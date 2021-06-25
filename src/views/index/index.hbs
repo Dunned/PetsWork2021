@@ -1,0 +1,176 @@
+<main class="container-fluid px-0">
+    <div class="container-fluid p-0">
+        <div class="container-fluid text-center p-0 busqueda">
+            <div class="m-0 p-0">
+                <img src="/assets/home1.png" alt="" width="100%">
+                <div class="capa1">
+                    <div class="container">
+                        <div class="row d-none d-lg-block">
+                            <div class="col-lg col-sm-12">
+                                <h1 class="text-white">¡Busca, postula y a trabajar!</h1>
+                            </div>
+                        </div>
+                        <div class="row d-none d-lg-block">
+                            <div class="col-lg col-sm-12">
+                                <div class="form-inline">
+                                    <div class="form-group col-md-3 p-0"></div>
+                                    <input class="form-control col-lg-5 mr-2" type="search" placeholder="Puesto, empresa o palabra clave" aria-label="Search">
+                                    <button class="btn" type="submit">Buscar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid jumbotron img-jmbo d-block">
+        <div class="container">
+            <h1 class="text-center font-weight-bold pb-1" style="color: rgba(10, 29, 66, 1);">Ofertas Laborales</h1>
+            <div class="row row-cols-1 row-cols-md-3 mt-4">
+                {{#if user}}
+                    {{#each trabajos}}
+                        <div class="col mb-4" >
+                            <div class="card" style="border-radius: 10px;">
+                                <div class="card-body">
+                                    <p class="card.text m-1 font-weight-bold">{{empresa_name}}</p>
+                                    <h5 class="card-title m-1">{{puesto}}</h5>
+                                    <p class="card-text m-1"><img src="/assets/icon/ubicacion.png" style="height: 20px; width: 20px;">{{pais}}</p>
+                                    <p class="card-text m-1"><img src="/assets/icon/rango.png" style="height: 20px; width: 20px;"> {{rango}}</p>
+                                    <div class="container text-right">
+                                        <button type="submit" class="btn"><a href="/persona/filtro/{{id}}">Ver más</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                {{else}}
+                    {{#each trabajos}} 
+                        <div class="col mb-4" >
+                            <div class="card" style="border-radius: 10px;">
+                                <div class="card-body">
+                                    <p class="card.text m-1 font-weight-bold">{{empresa_name}}</p>
+                                    <h5 class="card-title m-1">{{puesto}}</h5>
+                                    <p class="card-text m-1"><img src="/assets/icon/ubicacion.png" style="height: 20px; width: 20px;">{{pais}}</p>
+                                    <p class="card-text m-1"><img src="/assets/icon/rango.png" style="height: 20px; width: 20px;"> {{rango}}</p>
+                                    <div class="container text-right">
+                                        <button type="submoit" class="btn"><a href="/ingreso">Ver más</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container text-center">
+                {{#if user}}
+                    <button type="submit" class="btn"><a href="/usuario">Ver Ofertas Laborales</a></button>
+                {{else}}
+                    <button type="submit" class="btn"><a href="/ingreso">Ver Ofertas Laborales</a></button>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid text-center jumbootron">
+        <div class="row">
+            <div class="col-lg col-md-12 p-0 m-0 foto">
+                <div class="m-0 p-0">
+                    <img src="/assets/image 6.png" alt="" width="100%">
+                    <div class="capa1">
+                        <h3 class="py-5">Quiero encontrar mi trabajo ideal</h3>
+                    </div>
+                    <div class="capa">
+                        <h3>
+                            {{#if user}}
+                            <a href="" role="button">Quiero encontrar mi trabajo ideal</a>
+                            {{else}}
+                            <a href="/ingreso" role="button">Quiero encontrar mi trabajo ideal</a>
+                            {{/if}} 
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg col-md-12 p-0 m-0 foto">
+                <div class="m-0 p-0">
+                    <img src="/assets/image 10.png" alt="" width="100%">
+                    <div class="capa1">
+                        <h3 class="py-5">Quiero publicar un empleo</h3>
+                    </div>
+                    <div class="capa">
+                        <h3>
+                            {{#if user}}
+                            <a href="" role="button">Quiero publicar un empleo</a>
+                            {{else}}
+                            <a href="/ingreso" role="button">Quiero publicar un empleo</a>
+                            {{/if}}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col my-2">
+                <h1 style="color: rgba(10, 29, 66, 1);"><b>Futuros Servicios</b></h1>
+            </div>
+        </div>
+        <div class="row" id="contenedor-final">
+            <div class="col-lg col-md-12 p-0 m-0 foto">
+                <div class="m-0 p-0">
+                    <img src="/assets/image 7.png" alt="" width="100%">
+                    <div class="capa1">
+                        <h3 class="py-5">Quiero adoptar una mascota</h3>
+                    </div>
+                    <div class="capa">
+                        <h3>
+                            {{#if user}}
+                            <a href="" role="button">Quiero adoptar una mascota</a>
+                            {{else}}
+                            <a href="/ingreso" role="button">Quiero adoptar una mascota</a>
+                            {{/if}}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg col-md-12 p-0 m-0 foto">
+                <div class="m-0 p-0">
+                    <img src="/assets/image 8.png" alt="" width="100%">
+                    <div class="capa1">
+                        <h3 class="py-5">Quiero dar en adopción</h3>
+                    </div>
+                    <div class="capa">
+                        <h3>
+                            {{#if user}}
+                            <a href="" role="button">Quiero dar en adopción</a>
+                            {{else}}
+                            <a href="/ingreso" role="button">Quiero dar en adopción</a>
+                            {{/if}}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg col-md-12 p-0 m-0 foto">
+                <div class="m-0 p-0">
+                    <img src="/assets/image 9.png" alt="" width="100%">
+                    <div class="capa1">
+                        <h3 class="py-5">Quiero donar</h3>
+                    </div>
+                    <div class="capa">
+                        <h3>
+                            {{#if user}}
+                            <a href="" role="button">Quiero donar</a>
+                            {{else}}
+                            <a href="/ingreso" role="button">Quiero donar</a>
+                            {{/if}}
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -1,0 +1,86 @@
+<main class="container-fluid px-0 fondo py-4">
+    <div class="container justify-content-center align-self-center py-4">
+        <h1 class="text-center text-light pb-3">Actualiza tu información | Empresa</h1>
+        <form action="/empresa/editar/{{empresa.id}}" method="POST">
+            <div class="container justify-content-center pt-5 pb-4" style="background-color: rgba(255, 255, 255, 0.64); text-color: black; border-radius: 10px;">
+                <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="nombreE" class="ml-0">Razón social*:</label>
+                        <input type="text" class="form-control" name="rsocial" id="rsoacial" placeholder="Ingrese el nombre de su empresa" value = "{{empresa.rsocial}}" required minlength="4" maxlength="30">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="rucE" class="ml-0">RUC*:</label>
+                        <input type="number" class="form-control" name="codigo" id="codigo" placeholder="Ingrese su RUC" value = "{{empresa.codigo}}" readonly min="10000000000" max="99999999999">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="paisPE" class="ml-0">País*:</label>
+                        <select class="form-control" name="pais" id="pais">
+                            <option hidden selected required>{{empresa.pais}}</option>
+                            <option>Perú</option>
+                            <option>Argentina</option>
+                            <option>Brasil</option>
+                            <option>Bolivia</option>
+                            <option>Chile</option>
+                            <option>Ecuador</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="telefonoE" class="ml-0">Celular*:</label>
+                        <input type="number" class="form-control" name="telefono" id="telefono" placeholder="Ingrese su número de celular" value = "{{empresa.telefono}}" required min="900000000" max="999999999">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="correoE" class="ml-0">Correo electrónico*:</label>
+                        <input type="email" class="form-control" name="correo" id="correo" placeholder="Ingrese su correo electrónico" value = "{{empresa.correo}}" required>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="contraE" class="ml-0">Ingrese su contraseña nuevamente*:</label>
+                        <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña" value = "{{empresa.contrasena}}" required minlength="8" maxlength="12">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="direccionE" class="ml-0">Dirección de la empresa*:</label>
+                        <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Ingrese la dirección de su empresa" value = "{{empresa.direccion}}" required minlength="8" maxlength="20">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="paginaE" class="ml-0">Página de empresa:</label>
+                        <input type="url" class="form-control" name="pagina" id="pagina" placeholder="Ingrese el URL de su página web" value = "{{empresa.pagina}}">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="fbE" class="ml-0">Facebook de la empresa:</label>
+                        <input type="fb" class="form-control" name="fb" id="fb" placeholder="Ingrese el URL de su Facebook" value = "{{empresa.fb}}">
+                    </div>
+                </div>
+            </div>
+
+            <div class="container text-center pt-3">
+                <button type="submit" class="btn px-4">ACTUALIZAR</button>
+                <div class="col-lg m-0 mt-3">
+                    <p class="m-0"><a href="/empresa">Regresar</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('navbar').innerHTML = '<img src="/assets/LOGO_Mesa de trabajo 1.png" width="30" height="30" class="d-inline-block align-top" alt=""> Pet’s Work | Empresa';
+    });
+</script>

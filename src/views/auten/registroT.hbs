@@ -1,0 +1,106 @@
+<main class="container-fluid px-0 fondo3 py-4">
+    <div class="container justify-content-center align-self-center py-4">
+        <h1 class="text-center text-light pb-3">Publica tu aviso</h1>
+        <form action="/trabajo/registro" method="POST">
+            <div class="container justify-content-center pt-5 pb-4" style="background-color: rgba(255, 255, 255, 0.64); text-color: black; border-radius: 10px;">
+                <div class="form-row">
+                    <div class="form-group col-lg-3 m-0"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="puestoT" class="ml-0">Puesto / Título del aviso*:</label>
+                        <input type="text" class="form-control" name="puesto" id="puesto" placeholder="Ingrese el puesto/título del aviso" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-3 m-0"></div>
+                    <div class="form-group col-lg-6">
+                        <label for="descripcionT" class="ml-0">Descripción del puesto*:</label>
+                        <textarea maxlength="4096" class="form-control rounded-0" rows="8" name="descripcion" id="descripcion" placeholder="Ingrese la Descripción del puesto" required></textarea>
+                        <label>Caracteres restantes: <span></span></label>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-3 m-0"></div>
+                    <div class="form-group col-lg-3">
+                        <label for="paisT" class="ml-0">País*:</label>
+                        <select class="form-control" name="pais" id="pais">
+                            <option hidden selected disabled>Selecciona una opción</option>
+                            <option>Perú</option>
+                            <option>Argentina</option>
+                            <option>Brasil</option>
+                            <option>Bolivia</option>
+                            <option>Chile</option>
+                            <option>Ecuador</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-3">
+                        <label for="cateT" class="ml-0">Categoría del empleo*:</label>
+                        <select class="form-control" name="cate" id="cate">
+                            <option hidden selected disabled>Selecciona una opción</option>
+                            <option>Área Médica</option>
+                            <option>Área Técnica</option>
+                            <option>Área Psicología, Terapeútica, Etología</option>
+                            <option>Cuidado y Protección Animal</option>
+                            <option>Servicio de Estética y Cuidado</option>
+                            <option>Servicios de Logística, Transporte y Mantenimiento</option>
+                            <option>Servicios Complementarios</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4 m-0"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="rangoT" class="ml-0">Rango del puesto*:</label>
+                        <select class="form-control" name="rango" id="rango">
+                            <option hidden selected disabled>Selecciona una opción</option>
+                            <option>Bachiller</option>
+                            <option>Práctica pre-profesional</option>
+                            <option>Profesional con titulación</option>
+                            <option>Técnico</option>
+                            <option>Practicante técnico</option>
+                            <option>Estudios secundarios terminados</option>
+                            <option>Otros</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container text-center pt-4">
+                <button type="submit" class="btn px-4">LISTO</button>
+                <div class="col-lg m-0 mt-3">
+                    <p class="m-0"><a href="/empresa">Regresar</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+
+
+<script>
+    var inputs = "input[maxlength], textarea[maxlength]";
+    $(document).on('keyup', "[maxlength]", function (e) {
+        var este = $(this),
+        maxlength = este.attr('maxlength'),
+        maxlengthint = parseInt(maxlength),
+        textoActual = este.val(),
+        currentCharacters = este.val().length;
+        remainingCharacters = maxlengthint - currentCharacters,
+        espan = este.prev('label').find('span');      
+        // Detectamos si es IE9 y si hemos llegado al final, convertir el -1 en 0 - bug ie9 porq. no coge directamente el atributo 'maxlength' de HTML5
+        if (document.addEventListener && !window.requestAnimationFrame) {
+            if (remainingCharacters <= -1) {
+            remainingCharacters = 0;            
+            }
+        }
+        espan.html(remainingCharacters);
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('navbar').innerHTML = '<img src="/assets/LOGO_Mesa de trabajo 1.png" width="30" height="30" class="d-inline-block align-top" alt=""> Pet’s Work | Empresa';
+    });
+</script>

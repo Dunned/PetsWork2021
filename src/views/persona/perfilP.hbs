@@ -1,0 +1,285 @@
+<main class="container-fluid px-0">
+    <div class="container-fluid fondoPP p-0" id="padre">
+        <div class="container-fluid text-center" id="hijo">
+            <div class="row py-1" style="background: rgba(255, 0, 0, 0.1);">
+                <div class="col-lg">
+                    <h1 class="text-light">¡Busca, postula y a trabajar!</h1>
+                </div>
+            </div>
+            <div class="row pb-5 py-1" style="background: rgba(255, 0, 0, 0.1);">
+                <div class="col-lg">
+                    <form class="form-inline" method="POST" action="/persona">
+                        <div class="form-group col-md-3 p-0"></div>
+                        <input class="form-control mr-1 col-md-5 col-sm" type="text" name="busqueda" id="busqueda" placeholder="Puesto, empresa o palabra clave" aria-label="Search">
+                        <button class="btn px-3" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid fondoP p-0">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col">
+                    <h2><b>Ofertas Laborales</b></h2>
+                </div>
+            </div>
+            <p>¿Buscas trabajo? Tenemos varios puestos vacantes, elige las ofertas de trabajo que mejor se adaptan a tu perfil en nuestra bolsa de trabajo</p>
+            <div class="row py-3">
+                <div class="col-lg-4 col-md">
+                    <form name="container-form"  method="POST" action="/persona">
+                        <ul class="list-group">
+                            <li class="list-group-item mx-0" style="background: rgba(61,50,66,0.1); color: #162A35;"><b>Filtros</b></li>
+                            <li class="list-group-item mx-0" style="background: rgba(61,50,66,0.1); color: #162A35;"><b>País</b>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="pais" id="peru" value="Perú">
+                                    <label class="custom-control-label" for="peru">Perú</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="pais" id="argentina" value="Argentina">
+                                    <label class="custom-control-label" for="argentina">Argentina</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="pais" id="brasil" value="Brasil">
+                                    <label class="custom-control-label" for="brasil">Brasil</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="pais" id="bolivia" value="Bolivia">
+                                    <label class="custom-control-label" for="bolivia">Bolivia</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="pais" id="chile" value="Chile">
+                                    <label class="custom-control-label" for="chile">Chile</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="pais" id="ecuador" value="Ecuador">
+                                    <label class="custom-control-label" for="ecuador">Ecuador</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="pais" id="otros" value="Otros">
+                                    <label class="custom-control-label" for="otros">Otros</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" name="todosP" id="todosP" value="Todos">
+                                    <label class="custom-control-label" for="todosP">Todos</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item mx-0" style="background: rgba(61,50,66,0.1); color: #162A35;"><b>Categoría de empleo</b>
+                                
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="medica" name="categoria" class="custom-control-input" value="Área Médica">
+                                    <label class="custom-control-label" for="medica">Área Médica</label>
+                                </div>
+
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="tecnica" name="categoria" class="custom-control-input" value="Área Técnica">
+                                    <label class="custom-control-label" for="tecnica">Área Técnica</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="psico" name="categoria" class="custom-control-input" value="Área psicología, terapéutica, etología">
+                                    <label class="custom-control-label" for="psico">Área psicología, terapéutica, etología</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="cuidado" name="categoria" class="custom-control-input" value="Cuidado y pretección animal">
+                                    <label class="custom-control-label" for="cuidado">Cuidado y pretección animal</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="estetica" name="categoria" class="custom-control-input" value="Servicios de estética y cuidado">
+                                    <label class="custom-control-label" for="estetica">Servicios de estética y cuidado</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="logistica" name="categoria" class="custom-control-input" value="Servicios de logpitica, transporte y mantemiento">
+                                    <label class="custom-control-label" for="logistica">Servicios de logística, transporte y mantemiento</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="complementarios" name="categoria" class="custom-control-input" value="Servicios complementarios">
+                                    <label class="custom-control-label" for="complementarios">Servicios complementarios</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="todosC" name="todosC" class="custom-control-input" value="Todos">
+                                    <label class="custom-control-label" for="todosC">Todos</label>
+                                </div>
+                            </li>
+                            <li class="list-group-item mx-0" style="background: rgba(61,50,66,0.1); color: #162A35;"><b>Rango del puesto</b>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="bachiller" name="rango" class="custom-control-input" value="Bachiller">
+                                    <label class="custom-control-label" for="bachiller">Bachiller</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="práctica pre-profesional" name="rango" class="custom-control-input" value="Práctica pre-profesional">
+                                    <label class="custom-control-label" for="práctica pre-profesional">Práctica pre-profesional</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="profesional con titulación" name="rango" class="custom-control-input" value="Profesional con titulación">
+                                    <label class="custom-control-label" for="profesional con titulación">Profesional con titulación</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="tecnico" name="rango" class="custom-control-input" value="Técnico">
+                                    <label class="custom-control-label" for="tecnico">Técnico</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="practicante técnico" name="rango" class="custom-control-input" value="Practicante técnico">
+                                    <label class="custom-control-label" for="practicante técnico">Practicante técnico</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="estudios secundarios completos" name="rango" class="custom-control-input" value="Estudios secundarios completos">
+                                    <label class="custom-control-label" for="estudios secundarios completos">Estudios secundarios completos</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="otrosR" name="rango" class="custom-control-input" value="Otros">
+                                    <label class="custom-control-label" for="otrosR">Otros</label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" id="todosR" name="todosR" class="custom-control-input" value="Todos">
+                                    <label class="custom-control-label" for="todosR">Todos</label>
+                                </div>
+                                
+                            </li>
+                            <li class="list-group-item mx-0 text-center" style="background: rgba(61,50,66,0.1); color: #162A35;">
+                                <button class="btn my-2 submit-btn" ><a>Actualizar</a></button> 
+                            </li>
+                        </ul>
+                    </form>
+                    <div class="text-center jumbootron py-4">
+                        <div class="row">
+                            <div class="col my-2">
+                                <h2>Futuros Servicios</h2>
+                            </div>
+                        </div>
+                        <div class="foto">
+                            <div class="my-2 p-0" style="border-radius: 10px;">
+                                <img src="/assets/image 7.png" alt="" width="100%">
+                                <div class="capa1">
+                                    <h3 class="py-2">Quiero adoptar una mascota</h3>
+                                </div>
+                                <div class="capa">
+                                    <h3>Quiero adoptar una mascota</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="foto">
+                            <div class="my-2 p-0" style="border-radius: 10px;">
+                                <img src="/assets/image 8.png" alt="" width="100%">
+                                <div class="capa1">
+                                    <h3 class="py-4">Quiero dar en adopción</h3>
+                                </div>
+                                <div class="capa">
+                                    <h3>Quiero dar en adopción</h3>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="foto">
+                            <div class="my-2 p-0" style="border-radius: 10px;">
+                                <img src="/assets/image 9.png" alt="" width="100%">
+                                <div class="capa1">
+                                    <h3 class="py-4">Quiero donar</h3>
+                                </div>
+                                <div class="capa">
+                                    <h3>Quiero donar</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8 col-md">
+                    <div class="container">
+                        {{#each trabajos}} 
+                            <a href="/persona/filtro/{{id}}" class="text-dark">
+                                <div class="card px-2 my-2" style="border-radius: 10px;">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="pb-1 mb-0">{{empresa_name}}</p>
+                                                <h3><b>{{puesto}}</b></h3>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm mb-1">
+                                                <p class="card-text"><img src="/assets/icon/ubicacion.png" style="height: 20px;"> {{pais}}</p>
+                                            </div>
+                                            <div class="col-lg-6 col-sm mt-1">
+                                                <p class="card-text"><img src="/assets/icon/rango.png" style="height: 20px;"> {{rango}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        {{/each}}
+
+                        <nav>
+                            <div class="row">
+                                <div class="col-6"></div>
+                                <div class="col-6">
+                                    <ul class="pagination justify-content-end">
+                                        <li class="page-item mx-2">
+                                            <a class="page-link" style="border-radius: 50%;" href="/persona/atraz"><span aria-hidden="true">&laquo;</span></a>
+                                        </li>
+                                        <li class="page-item mx-2">
+                                            <a class="page-link" style="border-radius: 50%;" href="/persona/adelante"><span aria-hidden="true">&raquo;</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>  
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var checkboxPais = $('#todosP');
+        var colleccionPaisCheckbox = $('input[name="pais"]');
+        var checkboxCategoria = $('#todosC');
+        var colleccionCategoriaCheckbox = $('input[name="categoria"]');
+        var checkboxRango = $('#todosR');
+        var colleccionRangoCheckbox = $('input[name="rango"]');
+
+        //checkbox todos Pais marcados
+        checkboxPais.change(function() {
+            var isCheckAllPais = $(this).prop('checked');
+            colleccionPaisCheckbox.prop('checked', isCheckAllPais);
+        });
+        //coleccion de items Pais marcados
+        colleccionPaisCheckbox.change(function() {
+            var isCheckAllPais = colleccionPaisCheckbox.length === $('input[name="pais"]:checked').length;
+            checkboxPais.prop('checked', isCheckAllPais);
+        });
+
+        //checkbox todos Categoria marcados
+        checkboxCategoria.change(function() {
+            var isCheckAllCategoria = $(this).prop('checked');
+            colleccionCategoriaCheckbox.prop('checked', isCheckAllCategoria);
+        });
+        //coleccion de items Categoria marcados
+        colleccionCategoriaCheckbox.change(function() {
+            var isCheckAllCategoria = colleccionCategoriaCheckbox.length === $('input[name="categoria"]:checked').length;
+            checkboxCategoria.prop('checked', isCheckAllCategoria);
+        });
+
+        //checkbox todos Rango marcados
+        checkboxRango.change(function() {
+            var isCheckAllRango = $(this).prop('checked');
+            colleccionRangoCheckbox.prop('checked', isCheckAllRango);
+        });
+        //coleccion de items Rango marcados
+        colleccionRangoCheckbox.change(function() {
+            var isCheckAllRango = colleccionRangoCheckbox.length === $('input[name="rango"]:checked').length;
+            checkboxRango.prop('checked', isCheckAllRango);
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('navbar').innerHTML = '<img src="/assets/LOGO_Mesa de trabajo 1.png" width="30" height="30" class="d-inline-block align-top" alt=""> Pet’s Work | Persona';
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementsByClassName("nav-item")[1].innerHTML = '<li class="nav-item dropdown"><a class="nav-link dropdown-toggle ingresar p-0 mt-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/assets/icon/perfil.png" style="height: 30px;"></a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="/persona/editar/{{user.id}}">Editar perfil</a><div class="dropdown-divider"></div><a class="dropdown-item" href="/salir">Cerrar Sesión</a></div></li>';
+    });
+</script>

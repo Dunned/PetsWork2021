@@ -1,0 +1,110 @@
+<footer class="pb-4 pt-4 text-center">
+    <div class="container">
+        <div class="row pb-2">
+            <div class="col-lg col-md-12">
+                <div class="row">
+                    <div class="col"><h1>Institucional</h1></div>
+                </div>
+                <div class="row py-1">
+                    <div class="col"><a href="/nosotros?id=1">¿Quiénes somos?</a></div>
+                </div>
+                <div class="row py-1">
+                    <div class="col"><a href="/nosotros?id=2">Misión</a></div>
+                </div>
+                <div class="row py-1">
+                    <div class="col"><a href="/nosotros?id=2">Visión</a></div>
+                </div>
+                <div class="row py-1">
+                    <div class="col"><a href="/error">Blog</a></div>
+                </div>
+                <div class="row py-1">
+                    <div class="col"><a href="/nosotros?id=3">Soporte Técnico</a></div>
+                </div>
+            </div>
+
+            <div class="col-lg col-md-12">
+                <div class="row">
+                    <div class="col"><h1>Servicios</h1></div>
+                </div>
+                {{#if user}}
+                    <div class="row py-1">
+                        <div class="col"><a href="/error">Publicar aviso de empleo</a></div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col"><a href="/error">Postular a un empleo</a></div>
+                    </div>
+                    {{!-- <div class="row py-1">
+                        <div class="col"><a href="">Adoptar a una mascota</a></div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col"><a href="">Dar en adopcion una mascota</a></div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col"><a href="">Donar a un alberge / ONG</a></div>
+                    </div> --}}
+                {{else}}
+                    <div class="row py-1">
+                        <div class="col"><a href="/ingreso" role="button">Publicar aviso de empleo</a></div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col"><a href="/ingreso" role="button">Postular a un empleo</a></div>
+                    </div>
+                    {{!-- <div class="row py-1">
+                        <div class="col"><a href="/ingreso" role="button">Adoptar a una mascota</a></div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col"><a href="/ingreso" role="button">Dar en adopcion una mascota</a></div>
+                    </div>
+                    <div class="row py-1">
+                        <div class="col"><a href="/ingreso" role="button">Donar a un alberge / ONG</a></div>
+                    </div> --}}
+                {{/if}} 
+
+                <div class="row mt-4">
+                    <div class="col-12"><h2>Redes Sociales</h2></div>
+                    <div class="col-sm"></div>
+                    <div class="col-sm my-1">
+                        <a href="https://web.facebook.com/">
+                            <img src="/assets/icon/facebook.png" height="36">
+                        </a>
+                    </div>
+                    <div class="col-sm my-1">
+                        <a href="https://twitter.com/">
+                            <img src="/assets/icon/twitter.png" height="36">
+                        </a>
+                    </div>
+                    <div class="col-sm my-1">
+                        <a href="https://www.instagram.com/">
+                            <img src="/assets/icon/instagram.png" height="36">
+                        </a>
+                    </div>
+                    <div class="col-sm"></div>
+                </div>
+            </div>
+
+            <div class="col-lg col-md-12 aling-items-center justify-content-center">
+                <img src="/assets/LOGOb-03.png" alt="" width="50%">
+            </div>
+        </div>
+
+
+        <div class="row pt-3 mt-4 border-top border-light text-center">
+            <div class="col-lg-3 col-md-12">
+                {{#if user}}
+                    <a href="/usuario">Pet’s Work</a>
+                {{else}}
+                    <a href="/">Pet’s Work</a>
+                {{/if}}
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <a href="/info?id=4">Información Compañía</a>
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <a href="/info?id=5">Privacidad y Política</a>
+            </div>
+            <div class="col-lg-3 col-md-12">
+                <a href="/info?id=6">Términos y Condiciones</a>
+            </div>
+        </div>
+    </div>
+</footer>

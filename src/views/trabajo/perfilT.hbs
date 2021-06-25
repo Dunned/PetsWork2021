@@ -1,0 +1,67 @@
+<main class="container-fluid px-0 fondoPt py-4">
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="text-light"><b>Puestos de trabajo</b></h3>
+            </div>
+            <div class="col-6 text-right">
+                <button type="button" class="btn px-3" style="background: #972CB4;"><a class="text-ligth" href="/trabajo/editar/{{trabajo.id}}">EDITAR TU AVISO</a></button>
+            </div>
+        </div>
+    </div>
+
+    <form action="/trabajo/{{trabajo.id}}" method="POST">
+        <div class="container my-5">
+            <div class="" style="background: rgba(255,255,255,0.25); height: calc(89vh - 56px); overflow-y: scroll; border-radius: 10px;">
+                <div class="container my-5">
+                    <div class="card my-3 mx-3" style="border-radius: 10px;">
+                        <div class="card-body">
+                            <h5 class="card-title"><b>{{trabajo.puesto}}</b></h5>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6">
+                                    <h6>{{trabajo.rango}}</h6>
+                                    <p class="card-text" style="color: rgba(196,196,196,1); font-weight: bold;">{{trabajo.Npostulantes}} postulantes</p>
+                                    <textarea type="text" class="form-control rounded-0" rows="15" name="descripcionE" id="descripcionE" placeholder="Descripción del puesto" disabled>{{trabajo.descripcion}}</textarea>
+                                </div>
+                                <div class="col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <label for="estadoE" class="ml-0"><b>Estado de aviso</b></label>
+                                        <select class="form-control" name="estadoE" id="estadoE">
+                                            <option hidden selected disabled>{{trabajo.estado}}</option>
+                                            <option>Vigente</option>
+                                            <option>Concluido</option>
+                                        </select>
+                                    </div>
+                                    <p><b>Visualización de postulantes<img src="/assets/icon/drive.png" class="rounded float-right" style="width: 22px;"></b></p>
+                                    <div class="view" style="background: #C4C4C4; height: calc(40vh - 20px); overflow-y: scroll; border-radius: 10px;">
+                                        {{#each postulantes}}
+                                            <div class="card px-3 py-2 mx-3 my-3" style="border-radius: 10px;">
+                                                <p class="my-0"><b>{{nombre}} {{apellido}}</b></p>
+                                                <p class="my-0" style="color: rgba(196,196,196,1);">
+                                                    <img src="/assets/icon/pdf.png" style="width: 25px;"><a href="{{cv}}" target="_blank" class="text-dark"> {{cv}}</a>
+                                                </p>
+                                            </div>
+                                        {{/each}}
+                                    </div>
+                                    <div class="row py-4 text-center">
+                                        <div class="container text-center">
+                                            <button type="submit" class="btn col-lg-3 col-md m-1" style="background-color: #0A1D42; color:white;">ACTUALIZAR</button>
+                                            <button type="button" class="btn col-lg-3 col-md m-1" style="background-color: #0A1D42; color:white;" data-toggle="modal" data-target="#modal2">ELIMINAR</button>          
+                                            <button class="btn col-lg-3 col-md m-1" style="background-color: #0A1D42;"><a href="/ingreso">REGRESAR</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </form>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('navbar').innerHTML = '<img src="/assets/LOGO_Mesa de trabajo 1.png" width="30" height="30" class="d-inline-block align-top" alt=""> Pet’s Work | Empresa';
+    });
+</script>

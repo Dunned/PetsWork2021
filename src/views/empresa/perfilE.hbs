@@ -1,0 +1,64 @@
+<main class="container-fluid px-0 fondo4 py-4">
+    <div class="container text-light py-4 text-center">
+        {{#each empresa}}
+        <div class="row">
+            <div class="col-lg-12 col-md-12 p-1">
+                <h1 class="mx-0" style="color: rgba(10, 29, 66, 1);"><b>¡BIENVENIDO: {{rsocial}} !</b></h1>
+            </div>
+        </div>
+        {{/each}} 
+        
+        <div class="row pt-3">
+            <div class="col-lg-3 col-md-12 p-1">
+                <h3 style="color:rgb(16, 21, 31);">Tus Avisos Laborales</h3>
+            </div>
+            <div class="col-lg-5 col-md-12 m-0 p-0">
+            </div>
+            <div class="col-lg-2 col-md-12 p-1">
+                <button type="button" class="btn" style="background-color: rgba(151, 44, 180, 1);"><a href="empresa/editar/{{user.id_empresa}}">EDITAR PERFIL</a></button>
+            </div>
+            <div class="col-lg-2 col-md-12 p-1">
+                <button type="button" class="btn" style="background-color: rgba(151, 44, 180, 1);"><a href="trabajo/registro">PUBLICA TU AVISO</a></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-block mt-4">
+        <div class="container py-3" style="background: rgba(255,255,255,0.25); height: calc(75vh - 56px); overflow-y: scroll; border-radius: 10px;">
+            {{#each trabajos}}
+                <div class="col-lg-12 my-2">
+                    <div class="card my-4 mx-3" style="border-radius: 10px;">
+                        <div class="card-body">
+                            <div class="row m-0 p-0">
+                                <div class="col-lg-12 p-0 m-0 text-left">
+                                    <h5 class="card-title my-2">{{puesto}}</h5>
+                                </div>
+                                <div class="col-lg-10 col-md-12 p-0 m-0 text-left font-weight-bold">
+                                    <h5 style="color: rgba(196, 196, 196, 1);display:inline;">Postulantes: {{Npostulantes}} |</h5><h5 style="color: rgba(151, 44, 180, 1); display:inline"> Estado: {{estado}} </h5>
+                                </div>
+                                <div class="col-lg-2 col-md-12 p-0 m-0 text-right">
+                                    <button type="button" class="btn" style="background-color: rgba(53, 194, 223, 1);"><a  href="/trabajo/{{id}}">Ver más</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+            {{else}}
+
+            <div class="row">
+                <div class="col-lg-12 my-2">
+                    <div class="card card-body text-center">
+                        <p>No hay ninguna publicación</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('navbar').innerHTML = '<img src="/assets/LOGO_Mesa de trabajo 1.png" width="30" height="30" class="d-inline-block align-top" alt=""> Pet’s Work | Empresa'
+    });
+</script>

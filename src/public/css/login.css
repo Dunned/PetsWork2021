@@ -1,0 +1,28 @@
+.container .btn{
+    background-color: white;
+    color: #3a303f;
+}
+
+.container .btn:hover{
+    background-color: #0A1D42;
+    color: white;
+}
+
+.fondo1{
+    background-image: url('../assets/iniciar-sesion.png');
+    height: 100%;
+    min-width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+
+main a{
+    color: white;
+}
+
+main a:hover{
+    text-decoration: none;
+    color: inherit;
+}

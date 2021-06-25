@@ -1,0 +1,64 @@
+<main class="container-fluid px-0 fondo1 py-4">
+    <div class="container justify-content-center align-self-center text-black py-5">
+        <div class="card justify-content-center align-self-center py-5 mx-9" style="background-color: rgba(255, 255, 255, 0.54); color: rgba(62, 55, 55, 1);">
+            <h2 class="text-center font-weight-bold" style="color: rgba(62, 55, 55, 1);">INICIAR SESIÓN</h2>
+            <h3 class="text-center font-weight-bold" style="color: rgba(62, 55, 55, 1);">Bienvenido a Pet's Work</h3>
+            <img class="align-self-center justify-content-center" src="/assets/LOGO-04.png">
+            <form action="/ingreso" method="POST">
+                <div class="form-row ">
+                    <div class="form-group col-lg-4 m-0"></div>
+                    <div class="form-group col-lg-4 px-3">
+                        <label for="rucE" class="ml-0">RUC / DNI*:</label>
+                        <input type="number" class="form-control" style="background-color: rgba(196, 196, 196, 0.8)" name="codigo" id="codigo" placeholder="Ingrese RUC / DNI " required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4 m-0"></div>
+                    <div class="form-group col-lg-4 px-3">
+                        <label for="contraE" class="ml-0">Contraseña*:</label>
+                        <div class="row">
+                            <div class="col pr-0">
+                                <input type="password" class="form-control" style="background-color: rgba(196, 196, 196, 0.8)" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña" required>
+                            </div>
+                            <button class="btn btn-primary mr-3" style="background-color: rgba(196, 196, 196, 0.8)" type="button" onclick="mostrarContrasena()"><img style="height: 23px;" src="/assets/icon/show.png"></button>
+                        </div>
+                    </div>
+                </div>
+
+                {{#if message}}
+                    <div class="alert alert-danger alert-dismissible fade col-lg-4 mx-auto show" role="alert">
+                        {{message}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {{/if}}
+
+                <div class="container text-center font-weight-bold" style="font-size: 20px;">
+                    <button type="submit" class="btn px-5">INGRESAR</button>
+                    <div class="col-lg m-0 mt-4">
+                        <p class="m-0">¿No tiene cuenta?</p>
+                    </div>
+                    <div class="col-lg m-0">
+                        <p class="m-0">Regístrate: </p>
+                    </div>
+                    <div class="col-lg m-0">
+                        <a href="/registroE" style="color: rgba(62, 55, 55, 1);">Empresa</a> | 
+                        <a href="/registroP" style="color: rgba(62, 55, 55, 1);">Persona</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>
+<script>
+  function mostrarContrasena(){
+      var tipo = document.getElementById("contrasena");
+      if(tipo.type == "password"){
+          tipo.type = "text";
+      }else{
+          tipo.type = "password";
+      }
+  }
+</script>

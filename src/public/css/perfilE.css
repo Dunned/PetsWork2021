@@ -1,0 +1,41 @@
+.fondo_perfilE{
+    background-image: url('../assets/registro.png');
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+.fondo3{
+    background-image: url('../assets/registraT.png');
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+.fondo4{
+    background-image: url('../assets/bienvenidaE.jpg');
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-attachment: fixed; */
+}
+main a{
+    color: black;
+}
+
+main a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+.container #ver .btn{
+    background-color: white;
+    color: #000000;
+}
+
+.container #ver .btn:hover{
+    background-color: #0A1D42;
+    color: white;
+}

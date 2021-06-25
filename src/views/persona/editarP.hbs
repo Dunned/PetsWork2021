@@ -1,0 +1,91 @@
+<main class="container-fluid px-0 fondo py-4">
+    <div class="container justify-content-center align-self-center py-0">
+        <h1 class="text-center text-light pb-3 pt-2">Actualiza tu información</h1>
+        <form action="/persona/editar/{{persona.id}}" method="POST">
+            <div class="container justify-content-center py-5" style="background-color: rgba(255, 255, 255, 0.64); text-color: black; border-radius: 10px;">
+                <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="nombreP" class="ml-0">Nombres*:</label>
+                        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingrese su nombre" value = "{{persona.nombre}}" required maxlength="20">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="apellidoP" class="ml-0">Apellidos*:</label>
+                        <input type="text" class="form-control" name="apellido" id="apellido" placeholder="Ingrese sus apellidos" value = "{{persona.apellido}}" required maxlength="20">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="generoP" class="ml-0">Género*:</label>
+                        <select class="form-control" name="genero" id="genero" value = "{{persona.genero}}">
+                            <option>Masculino</option>
+                            <option>Femenino</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="correoP" class="ml-0">Correo Electrónico*:</label>
+                        <input type="email" class="form-control" name="correo" id="correo" placeholder="Ingrese su correo electrónico" value = "{{persona.correo}}" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="contrasenaP" class="ml-0">Contraseña*:</label>
+                        <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña" value = "{{persona.contrasena}}" required minlength="8" maxlength="12">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="edadP" class="ml-0">Edad*:</label>
+                        <input type="number" class="form-control" name="edad" id="edad" placeholder="Ingrese su edad" value = "{{persona.edad}}" required min="18">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="celularP" class="ml-0">Celular*:</label>
+                        <input type="number" class="form-control" name="celular" id="celular" placeholder="Ingrese su celular" value = "{{persona.celular}}" required min="900000000" max="999999999">
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <label for="dniP" class="ml-0">DNI*:</label>
+                        <input type="number" class="form-control" name="codigo" id="codigo" placeholder="Ingrese su DNI" value = "{{persona.codigo}}" readonly min="11111111" max="99999999">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4 m-0"></div>
+                    <div class="form-group col-lg-4">
+                        <label for="paisP" class="ml-0">País*:</label>
+                        <select class="form-control" name="pais" id="pais" value = "{{persona.pais}}">
+                            <option>Perú</option>
+                            <option>Argentina</option>
+                            <option>Brasil</option>
+                            <option>Bolivia</option>
+                            <option>Chile</option>
+                            <option>Ecuador</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container text-center pt-3">
+                <button type="submit" class="btn px-3">ACTUALIZAR</button>
+                <div class="col-lg m-0 mt-3 text-ligth">
+                    <p class="m-0"><a href="/persona">Regresar</a></p>
+                </div>
+            </div>
+        </form>
+    </div>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('navbar').innerHTML = '<img src="/assets/LOGO_Mesa de trabajo 1.png" width="30" height="30" class="d-inline-block align-top" alt=""> Pet’s Work | Persona';
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementsByClassName("nav-item")[1].innerHTML = '<li class="nav-item dropdown"><a class="nav-link dropdown-toggle ingresar p-0 mt-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/assets/icon/perfil.png" style="height: 30px;"></a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="/persona/editar/{{user.id}}">Editar perfil</a><div class="dropdown-divider"></div><a class="dropdown-item" href="/salir">Cerrar Sesión</a></div></li>';
+    });
+</script>

@@ -1,0 +1,94 @@
+<main class="container-fluid px-0 fondo py-4">
+    <div class="container justify-content-center align-self-center py-4">
+        <h1 class="text-center text-light pb-3">REGISTRA TU EMPRESA</h1>
+            <form action="/registroE" method="POST">
+                <div class="container justify-content-center pt-5 pb-4" style="background-color: rgba(255, 255, 255, 0.64); text-color: black; border-radius: 10px;">
+                    <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4 mx-1">
+                        <label for="nombreE" class="ml-0">Razón social*:</label>
+                        <input type="text"  class="form-control" name="rsocial" id="rsocial" placeholder="Ingrese el nombre de su empresa" required minlength="4" maxlength="30">
+                    </div>
+                    <div class="form-group col-lg-4 mx-1">
+                        <label for="rucE" class="ml-0">RUC*:</label>
+                        <input type="number" class="form-control" name="codigo" id="codigo" placeholder="Ingrese su RUC" required min="10000000000" max="99999999999">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4 mx-1">
+                        <label for="paisPE" class="ml-0">País*:</label>
+                        <select class="form-control" name="pais" id="pais">
+                            <option hidden selected disabled>Selecciona una opción</option>
+                            <option>Perú</option>
+                            <option>Argentina</option>
+                            <option>Brasil</option>
+                            <option>Bolivia</option>
+                            <option>Chile</option>
+                            <option>Ecuador</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group col-lg-4 mx-1">
+                        <label for="telefonoE" class="ml-0">Celular*:</label>
+                        <input type="number" class="form-control" name="telefono" id="telefono" placeholder="Ingrese su número de celular" required min="900000000" max="999999999">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4 mx-1">
+                        <label for="correoE" class="ml-0">Correo electrónico*:</label>
+                        <input type="email" class="form-control" name="correo" id="correo" placeholder="Ingrese su correo electrónico" required>
+                    </div>
+                    <div class="form-group col-lg-4 mx-1">
+                        <label for="contraE" class="ml-0">Contraseña*:</label>
+                        <input type="password" class="form-control" name="contrasena" id="contrasena" placeholder="Ingrese su contraseña" required minlength="8" maxlength="12">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-2 m-0"></div>
+                    <div class="form-group col-lg-4 mx-1">
+                        <label for="direccionE" class="ml-0">Dirección de la empresa*:</label>
+                        <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Ingrese la dirección de su empresa" required minlength="8" maxlength="70">
+                    </div>
+                    <div class="form-group col-lg-4 mx-1">
+                        <label for="paginaE" class="ml-0">Página de empresa:</label>
+                        <input type="url" class="form-control" name="pagina" id="pagina" placeholder="Ingrese el URL de su página web">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-lg-4"></div>
+                    <div class="form-group col-lg-4 mx-1">
+                        <label for="fbE" class="ml-0">Facebook de la empresa:</label>
+                        <input type="fb" class="form-control" name="fb" id="fb" placeholder="Ingrese el URL de su Facebook">
+                    </div>
+                </div>
+                </div>
+                
+                {{#if message}}
+                    <div class="alert alert-danger alert-dismissible fade col-lg-4 mx-auto show" role="alert">
+                        {{message}}
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {{/if}}
+
+                <div class="container text-center py-4">
+                    <button type="submit" class="btn px-4">REGISTRAR</button>
+                    <div class="col-lg m-0 mt-4 text-light">
+                        <p class="m-0">¿Ya tiene cuenta?</p>
+                    </div>
+                    <div class="col-lg m-0 text-light ">
+                        <a href="/ingreso" style="color: white;">Iniciar Sesión</a>
+                    </div>
+                </div>
+            </form>
+        
+    </div>
+</main>

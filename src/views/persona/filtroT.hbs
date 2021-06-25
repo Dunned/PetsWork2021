@@ -1,0 +1,141 @@
+<main class="container-fluid px-0">
+    <div class="container-fluid fondoPP p-0" id="padre">
+        <div class="container-fluid text-center" id="hijo">
+            <div class="row py-1" style="background: rgba(255, 0, 0, 0.1);">
+                <div class="col-lg">
+                    <h1 class="text-light py-4">¡Busca, postula y a trabajar!</h1>
+                </div>
+            </div>
+            <div class="row pb-5 py-1" style="background: rgba(255, 0, 0, 0.1);">
+                {{!-- <div class="col-lg">
+                    <form class="form-inline" method="POST" action="/persona/filtro/{{aviso.id}}" >
+                        <div class="form-group col-md-3 p-0"></div>
+                        <input class="form-control mr-2 col-md-5 col-sm" type="text" name="busqueda" id="busqueda" placeholder="Puesto, empresa o palabra clave" aria-label="Search">
+                        <button class="btn my-2 col-md-1 col-sm" >Buscar</button>
+                    </form>
+                </div> --}}
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid fondoP py-0">
+        <div class="container py-5">
+            <p><a href="/persona" style="color: #C4C4C4;">Editar filtros</a></p>
+            <div class="row py-3">
+                <div class="col-lg-4 col-md mt-2">
+                    <div class="container" style="height: 95vh; overflow-y: scroll; background-color: rgba(255, 255, 255, 0.5);">
+                        {{#each trabajos}} 
+                            <a href="/persona/filtro/{{id}}" class="text-dark">
+                                <div class="card px-1 my-1" style="border-radius: 10px;">
+                                    <div class="card-body">
+                                        <div class="row">
+                                            <div class="col">
+                                                <p class="py-1 my-0">{{empresa_name}}</p>
+                                                <h3><b>{{puesto}}</b></h3>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6 col-sm mb-1">
+                                                <p class="card-text"><img src="/assets/icon/ubicacion.png" style="height: 20px;"> {{pais}}</p>
+                                            </div>
+                                            <div class="col-lg-6 col-sm mt-1">
+                                                <p class="card-text"><img src="/assets/icon/rango.png" style="height: 20px;"> {{rango}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md mt-2">
+                    <div class="container">
+                        <div class="card px-2 my-2" style="border-radius: 10px; background-color: rgba(255, 255, 255, 0.5);">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-8 col-sm mb-1">
+                                        <h3 class="font-weight-bold">{{aviso.puesto}}<h1>
+                                        <h5>{{aviso.empresa_name}}</h5>
+                                        <p class="card-text py-1 m-0"><img src="/assets/icon/ubicacion.png" style="height: 20px;">{{aviso.pais}}</p>
+                                        <p class="card-text py-1 m-0"><img src="/assets/icon/area.png" style="height: 20px;">{{aviso.cate}}</p>
+                                        <p class="card-text py-1 m-0"><img src="/assets/icon/rango.png" style="height: 20px;">{{aviso.rango}}</p>
+                                    </div>
+                                    <div class="col-lg-4 col-sm text-right mt-1">
+                                        {{#if postula}}
+                                            <div class="form">
+                                                <div class="form-group">
+                                                    <button id="postular" type="button" class="btn btn-aviso disabled px-4" style="background-color: #0A1D42;"><a class="text-light disabled" >{{postula.estado}}</a></button>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button id="editar" type="button" class="btn btn-editar px-5" style="background-color: #0A1D42;"><a class="a-editar text-light" href="/persona/postular/editar/{{aviso.id}}">Editar</a></button>
+                                                </div>
+                                            </div>
+                                        {{else}}
+                                            <button id="postular" type="button" class="btn mb-3 btn-aviso px-5" style="background-color: #0A1D42;"><a class="text-light" href="/persona/postular/{{aviso.id}}">Postular</a></button>
+                                        {{/if}}
+                                        <p class="my-0">Fecha de publicacion:</p>
+                                        <p class="my-0">{{timeago aviso.created_at}}</p>
+                                        <p class="my-0">Estado:</p>
+                                        <p class="my-0">{{aviso.estado}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <h4 class="mt-3">Descripción del aviso laboral</h4>
+                                        <textarea class="form-control rounded-0" rows="22" style="border: none;" disabled>{{aviso.descripcion}}</textarea>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+
+                        {{!-- <nav>
+                            <div class="row">
+                                <div class="col-6"></div>
+                                <div class="col-6">
+                                    <ul class="pagination justify-content-end">
+                                        <li class="page-item mx-2">
+                                            <a class="page-link" style="border-radius: 50%;" href="/persona/filtro/{{aviso.id}}"><span aria-hidden="true">&laquo;</span></a>
+                                        </li>
+                                        <li class="page-item mx-2">
+                                            <a class="page-link" style="border-radius: 50%;" href="/persona/filtro/{{aviso.id}}"><span aria-hidden="true">&raquo;</span></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>  
+                        </nav> --}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var BtnAviso = $('.btn-aviso');
+        var Aviso = $('.a-aviso');
+        var BtnEditar = $('.btn-editar');
+        var Editar = $('.a-editar');
+
+        function GetValor(){
+            var Aviso2 = document.getElementByClass('[Postular].obj');
+            console.log(Aviso2);
+            if(Aviso2 === 'Postular'){
+                console.log('hola');
+            }
+        }
+        
+        console.log(Aviso);
+        
+
+    });
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('navbar').innerHTML = '<img src="/assets/LOGO_Mesa de trabajo 1.png" width="30" height="30" class="d-inline-block align-top" alt=""> Pet’s Work | Persona';
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementsByClassName("nav-item")[1].innerHTML = '<li class="nav-item dropdown"><a class="nav-link dropdown-toggle ingresar p-0 mt-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/assets/icon/perfil.png" style="height: 30px;"></a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="/persona/editar/{{user.id}}">Editar perfil</a><div class="dropdown-divider"></div><a class="dropdown-item" href="/salir">Cerrar Sesión</a></div></li>';
+    });
+</script>

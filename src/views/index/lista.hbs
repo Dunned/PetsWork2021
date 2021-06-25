@@ -1,0 +1,24 @@
+<main>
+    <div class="container-fluid jumbotron img-jmbo d-block">
+        <div class="container">
+            <h1 class="text-center text-white pb-1">Ofertas Laborales</h1>
+            <div class="row row-cols-1 row-cols-md-3">
+                {{#each lista}} 
+                <div class="col mb-4">
+                    <div class="card" style="border-radius: 10px;">
+                        <div class="card-body">
+                            <p class="card.text m-1">{{empresa_name}}</p>
+                            <h5 class="card-title m-1">{{puesto}}</h5>
+                            <p class="card-text m-1"><img src="/assets/icon/ubicacion.png" style="height: 20px; width: 20px;">{{pais}}</p>
+                            <p class="card-text m-1"><img src="/assets/icon/rango.png" style="height: 20px; width: 20px;"> {{rango}}</p>
+                            <div class="container text-right">
+                                <button type="button" class="btn" ><a href="/persona/filtro/{{id}}">Ver más</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</main>

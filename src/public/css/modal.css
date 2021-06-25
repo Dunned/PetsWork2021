@@ -1,0 +1,13 @@
+.modal-content{
+    color: white;
+    background: linear-gradient(90deg, rgba(135, 143, 255, 1), rgba(135, 143, 255, 0.8), rgba(202, 123, 235, 1));
+}
+
+.modal-content a{
+    color: white;
+    text-decoration: none;
+}
+.modal-content a:hover{
+    color: white;
+    text-decoration: none;
+}

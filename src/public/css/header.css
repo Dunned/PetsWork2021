@@ -1,0 +1,11 @@
+header{
+    width: 100%;
+}
+
+li{
+    margin: 0 10px;
+}
+
+.ingresar{
+    color: black !important;
+}

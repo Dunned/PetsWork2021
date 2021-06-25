@@ -1,0 +1,30 @@
+<main>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6 text-center">
+                <img src="/assets/cheems.jpg" alt="Doge con ansiedad por no encontrar la página" width="100%">
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                {{#if user}}
+                    <button type="btn" class="btn-enviar btn my-4" style="background-color: #3D3242; color:white;"><a href="/usuario">Regresar al inicio</a></button>
+
+                {{else}}
+                    <button type="btn" class="btn-enviar btn my-4" style="background-color: #3D3242; color:white;"><a href="/">Regresar al inicio</a></button>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('navbar').innerHTML = '<img src="/assets/LOGO_Mesa de trabajo 1.png" width="30" height="30" class="d-inline-block align-top" alt=""> Pet’s Work | Persona';
+    });
+    document.addEventListener('DOMContentLoaded', function() {
+        document.getElementsByClassName("nav-item")[1].innerHTML = '<li class="nav-item dropdown"><a class="nav-link dropdown-toggle ingresar p-0 mt-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="/assets/icon/perfil.png" style="height: 30px;"></a><div class="dropdown-menu" aria-labelledby="navbarDropdown"><a class="dropdown-item" href="/persona/editar/{{user.id}}">Editar perfil</a><div class="dropdown-divider"></div><a class="dropdown-item" href="/salir">Cerrar Sesión</a></div></li>';
+    });
+</script>
