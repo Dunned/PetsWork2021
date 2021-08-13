@@ -15,6 +15,9 @@
                     <div class="col"><a href="/nosotros?id=2">Visión</a></div>
                 </div>
                 <div class="row py-1">
+                    <div class="col"><a href="/error">Blog</a></div>
+                </div>
+                <div class="row py-1">
                     <div class="col"><a href="/nosotros?id=3">Soporte Técnico</a></div>
                 </div>
             </div>
@@ -24,15 +27,12 @@
                     <div class="col"><h1>Servicios</h1></div>
                 </div>
                 {{#if user}}
-                    {{#if empresa}}
                     <div class="row py-1">
-                        <div class="col"><a href="/trabajo/registro">Publicar aviso de empleo</a></div>
+                        <div class="col"><a href="/registroT">Publicar aviso de empleo</a></div>
                     </div>
-                    {{else}}
                     <div class="row py-1">
-                        <div class="col"><a href="">Postular a un empleo</a></div>
+                        <div class="col"><a href="/perfilP">Postular a un empleo</a></div>
                     </div>
-                    {{/if}} 
                     {{!-- <div class="row py-1">
                         <div class="col"><a href="">Adoptar a una mascota</a></div>
                     </div>

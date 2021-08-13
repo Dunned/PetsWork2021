@@ -6,49 +6,46 @@
     background-position: center;
     /* background-attachment: fixed; */
 }
-
-#boton-link:hover {
+#boton-link:hover{
     background-color: white;
     color: black;
     text-decoration: none;
 }
 
-main a {
+main a{
     color: white;
 }
-
-main a:hover {
+main a:hover{
     text-decoration: none;
     color: inherit;
 }
 
-.btn {
+.btn{ 
     background-color: white;
     color: #3D3242;
 }
 
-.btn:hover {
+.btn:hover{
     background-color: rgba(10, 29, 66, 1);
     color: white;
 }
 
-.img-jmbo {
+.img-jmbo{
     background-image: url('../assets/home2.png');
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.jumbotron {
+.jumbotron{
     margin-top: 50px;
     margin-bottom: 50px;
 }
-
-.jumbotron a {
+.jumbotron a{
     color: black;
 }
 
-#contenedor-final {
+#contenedor-final{
     margin-bottom: 50px;
 }
 
@@ -56,7 +53,7 @@ main a:hover {
     position: relative;
     overflow-wrap: hidden;
 }
-
+  
 .busqueda .capa1 {
     position: absolute;
     top: 70%;
@@ -65,18 +62,19 @@ main a:hover {
     right: 0;
     background: rgba(0, 0, 0, 0.5);
     color: white;
+
 }
 
-.foto div {
+.foto div{
     position: relative;
     overflow: hidden;
 }
 
-.foto div img {
+.foto div img{
     transition: all 500ms ease-out;
 }
 
-.capa h3 {
+.capa h3{
     position: absolute;
     top: 50%;
     bottom: 50%;
@@ -84,11 +82,12 @@ main a:hover {
     height: 100%;
 }
 
-.foto div .capa {
+.foto div .capa{
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
+
     background: rgba(202, 123, 235, 0.8);
     transition: all 500ms ease-out;
     opacity: 0;
@@ -96,7 +95,7 @@ main a:hover {
     text-align: center;
 }
 
-.foto div .capa1 {
+.foto div .capa1{
     color: white;
     position: absolute;
     top: 65%;
@@ -105,12 +104,12 @@ main a:hover {
     background: rgba(202, 123, 235, 0.8);
 }
 
-.foto div:hover>.capa {
+.foto div:hover > .capa{
     opacity: 1;
     visibility: visible;
 }
 
-.foto div:hover .capa1 {
+.foto div:hover .capa1{
     position: absolute;
     top: 50%;
     width: 100%;
@@ -120,24 +119,23 @@ main a:hover {
     visibility: hidden;
 }
 
-.foto div:hover>.capa h3 {
+.foto div:hover > .capa h3{
     color: white;
 }
 
-.foto div:hover>img {
+.foto div:hover > img{
     transform: scale(1.3);
 }
 
-nav .page-link {
-    background-color: rgba(202, 123, 235, 0.8);
+nav .page-link{
+    background-color: rgba(202, 123, 235, 0.8); 
     color: black;
 }
 
-nav .page-link:hover {
+nav .page-link:hover{
     background-color: rgba(202, 123, 235, 0.8);
     color: black;
 }
-
 .fondoI {
     background-image: url('../assets/info1.png');
     height: 100%;
@@ -146,7 +144,6 @@ nav .page-link:hover {
     background-position: center;
     /* background-attachment: fixed; */
 }
-
 .fondoI1 {
     background-image: url('../assets/infof2.png');
     height: 100%;
@@ -155,7 +152,6 @@ nav .page-link:hover {
     background-position: center;
     /* background-attachment: fixed; */
 }
-
 .fondoN1 {
     background-image: url('../assets/infof1.png');
     height: 100%;
@@ -164,7 +160,6 @@ nav .page-link:hover {
     background-position: center;
     /* background-attachment: fixed; */
 }
-
 .fondoPP {
     background-image: url('../assets/bpt1.jpg');
     height: 100%;
@@ -173,7 +168,6 @@ nav .page-link:hover {
     background-position: center;
     /* background-attachment: fixed; */
 }
-
 .fondoP {
     background-image: url('../assets/bienvenidaP.png');
     height: 100%;
@@ -182,7 +176,6 @@ nav .page-link:hover {
     background-position: center;
     /* background-attachment: fixed; */
 }
-
 .fondoPt {
     background-image: url('../assets/postulacion.png');
     height: 100%;
